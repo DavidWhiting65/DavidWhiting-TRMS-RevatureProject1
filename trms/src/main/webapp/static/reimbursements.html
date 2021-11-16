@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .btnStack {
+            font-family: Oswald, Helvetica, sans-serif;
+            background-color: orange;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.428571429;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        a.btnStack:hover {
+            background-color: #000;
+        }
+
+    </style>
+    <title>Reimbursements</title>
+
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="reimbursementInfo" class="container">
+        <h3>
+            <b>Tuition Reimbursement Form</b>
+        </h3>
+        <br>
+        <label for="employeeId"><b>Employee ID: </b></label><br>
+        <input type="number" id="employeeId" class="form-control" placeholder="Employee ID">
+
+        <label for="eventName"><b>Event Name: </b></label><br>
+        <input type="text" id="eventName" class="form-control" placeholder="New Event Name">
+
+        <label for="claimDate"><b>Claim Date: </b></label><br>
+        <input type="date" id="claimDate" class="form-control" placeholder="Claim Date">
+
+        <label for="eventStartDate"><b>Event Start Date: </b></label><br>
+        <input type="date" id="eventStartDate" class="form-control" placeholder="Event Start Date">
+
+        <label for="eventEndDate"><b>Event End Date: </b></label><br>
+        <input type="date" id="eventEndDate" class="form-control" placeholder="Event End Date">
+
+        <label for="cost"><b>Cost: </b></label><br>
+        <input type="number" id="cost" class="form-control" placeholder="Cost $">
+
+        <!--<label for="tuitionType"><b>Tuition Type: </b></label>
+        <input type="text" id="tuitionType" class="form-control" placeholder="e.g. Seminars">-->
+
+        <label ><b>Tuition Type: </b></label><br>
+        <input type="radio" id="universitycourses" name="tuitionType" value="University Courses">
+        <label for="universitycourses">University Courses</label><br>
+
+        <input type="radio" id="seminars" name="tuitionType" value="Seminars">
+        <label for="seminars">Seminars</label><br>
+
+        <input type="radio" id="certificationpreparationclasses" name="tuitionType" value="Certification Preparation Classes">
+        <label for="certificationpreparationclasses">Certification Preparation Classes</label><br>
+
+        <input type="radio" id="certification" name="tuitionType" value="Certification">
+        <label for="certification">Certification</label><br>
+
+        <input type="radio" id="technicaltraining" name="tuitionType" value="Technical Training">
+        <label for="technicaltraining">Technical Training</label><br>
+
+        <input type="radio" id="other" name="tuitionType" value="Other">
+        <label for="other">Other</label><br>
+
+
+        <label for="workJustification"><b>Work Justification: </b></label>
+        <input type="text" id="workJustification" class="form-control" placeholder="e.g. Job Training">
+
+        <label for="eventLocation"><b>Event Location: </b></label>
+        <input type="text" id="eventLocation" class="form-control" placeholder="e.g. Local Community College">
+
+        <button type="button" id="addReimbursement" class="btn btn-primary" onclick="addReimbursement()">Add Reimbursement</button>
+        <br><a class="btnStack" onclick="goBack()">Go Back</a>
+        <a class="btnStack" href="http://localhost:8080/trms/static/index.html">Logout</a>
+
+
+    </div>
+
+    <br><br>
+
+    <!--<div class="container">
+
+        <input type="submit" class="btn btn-primary" onclick="getReimbursementsFetch()" value="Get All Reimbursements">
+
+        <section id="data">
+
+        </section>
+
+    </div>-->
+
+    <script>function goBack() {window.history.back();}</script>
+    <script src="./js/reimbursements.js"></script>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

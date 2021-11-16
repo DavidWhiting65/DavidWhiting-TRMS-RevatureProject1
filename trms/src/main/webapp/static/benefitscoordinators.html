@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .btnStack {
+            font-family: Oswald, Helvetica, sans-serif;
+            background-color: orange;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.428571429;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        a.btnStack:hover {
+            background-color: #000;
+        }
+
+    </style>
+
+    <title>Benefits Coordinator</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container">
+    <h3>
+        BENEFITS COORDINATORS
+    </h3>
+    <!--<br><b>Get Pending Reimbursements</b><br>
+    <input type="button" class="btn btn-primary" onclick="getPendingReimbursementsFetch()" value="Get All Pending Reimbursements">
+    <br>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <br><b>Get Direct Supervisor and Department Head Approved Pending Reimbursements</b><br>
+    <input type="button" class="btn btn-primary" onclick="getDirectSupervisorAndDepartmentHeadApprovedPendingReimbursementsFetch()" value="Get Direct Supervisor And Department Head Approved Pending Reimbursements">
+    <br>-------------------------------------
+    <br><b>Get Urgent Reimbursements</b><br>
+    <input type="button" class="btn btn-primary" onclick="getUrgentReimbursementsFetch()" value="Get Urgent Reimbursements">
+    <br>-------------------------------------
+    <br><b>Get All Reimbursements</b><br>
+    <input type="submit" class="btn btn-primary" onclick="getReimbursementsFetch()" value="Get All Reimbursements">
+    <br>-------------------------------------
+    <br><b>Award Reimbursement</b><br>
+    <div>
+        <label for="reimbursementId3">Reimbursement ID:
+            <input id="reimbursementId3" type="number" name="reimbursementId" class="form-control">
+        </label>
+        <input type="button" class="btn btn-primary" onclick="awardReimbursement()" value="Award Reimbursement">
+    </div>
+    -------------------------------------
+    <br><b>Adjust Amount</b><br>
+    <div>
+        <label for="reimbursementId4">Reimbursement ID:
+            <input id="reimbursementId4" type="number" name="reimbursementId" class="form-control">
+        </label>
+        <label for="approvedAmount">Approved Amount:
+            <input id="approvedAmount" type="number" name="approvedAmount" class="form-control">
+        </label>
+        <label for="directSupervisorMessage2">Adjustment Reason:
+            <input id="directSupervisorMessage2" type="text" name="directSupervisorMessage" class="form-control">
+        </label>
+        <input type="button" class="btn btn-primary" onclick="adjustAmount()" value="Adjust Amount">
+    </div>
+    -------------------------------------
+    <br><b>Request Additional Information</b><br>
+    <div>
+        <label for="reimbursementId2">Reimbursement ID:
+            <input id="reimbursementId2" type="number" name="reimbursementId" class="form-control">
+        </label>
+
+        <input type="button" class="btn btn-primary" onclick="requestAdditionalInfo()" value="Request Additional Info">
+    </div>
+    -------------------------------------
+    <br><b>Decline Reimbursement</b><br>
+    <div>
+        <label for="reimbursementId1">Reimbursement ID:
+            <input id="reimbursementId1" type="number" name="reimbursementId" class="form-control">
+        </label>
+        <label for="directSupervisorMessage">Decline Reason:
+            <input id="directSupervisorMessage" type="text" name="directSupervisorMessage" class="form-control">
+        </label>
+        <input type="button" class="btn btn-primary" onclick="declineReimbursement()" value="Decline Reimbursement">
+    </div>
+    -------------------------------------
+    <br>
+    <a class="btnStack" href="http://localhost:8080/trms/static/reimbursements.html">Apply For Reimbursement</a>
+    <a class="btnStack" href="http://localhost:8080/trms/static/employees.html">Go To Employees Page</a>
+    <a class="btnStack" href="http://localhost:8080/trms/static/index.html">Logout</a>
+    <br>
+
+    <!-- populate here-->
+    <section id="data">
+
+    </section>
+
+</div>
+
+<script src="./js/benefitscoordinators.js"></script>
+<!-- Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+</body>
+</html>

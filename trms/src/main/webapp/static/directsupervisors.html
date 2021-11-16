@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <style>
+        .btnStack {
+            font-family: Oswald, Helvetica, sans-serif;
+            background-color: orange;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.428571429;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        a.btnStack:hover {
+            background-color: #000;
+        }
+
+    </style>
+
+    <title>Direct Supervisors</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
+    <!--Bootstrap CSS-->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+    <h3>
+        <b>Direct Supervisors</b>
+    </h3>
+    <br><b>Get Pending Reimbursements For Supervised Employees</b><br>
+    <div>
+        <label for="directSupervisorId">Supervisor Employee ID:
+            <input id="directSupervisorId" type="number" name="directSupervisorId" class="form-control">
+        </label>
+        <input type="button" class="btn btn-primary" onclick="getSupervisedPendingReimbursementsFetch()" value="Get Supervised Pending Reimbursements">
+    </div>
+    -------------------------------------
+    <br>
+    <b>Approve Reimbursement</b>
+    <br>
+    <div>
+
+        <label for="reimbursementId3">Reimbursement ID:
+            <input id="reimbursementId3" type="number" name="reimbursementId" class="form-control">
+        </label>
+        <input type="button" class="btn btn-primary" onclick="approveReimbursement()" value="Approve Reimbursement">
+
+    </div>
+    -------------------------------------
+    <br>
+    <b>Decline Reimbursement</b>
+    <br>
+    <div>
+        <label for="reimbursementId2">Reimbursement ID:
+            <input id="reimbursementId2" type="number" name="reimbursementId" class="form-control">
+        </label>
+        <label for="directSupervisorMessage">Decline Reason:
+            <input id="directSupervisorMessage" type="text" name="directSupervisorMessage" class="form-control">
+        </label>
+        <input type="button" class="btn btn-primary" onclick="declineReimbursement()" value="Decline Reimbursement">
+    </div>
+    -------------------------------------
+    <br><b>Update Grade</b><br>
+    <div>
+
+        <label for="reimbursementId5">Reimbursement ID:
+            <input id="reimbursementId5" type="number" name="reimbursementId" class="form-control">
+        </label>
+        <label for="grade">Grade:
+            <input id="grade" type="text" name="grade" class="form-control">
+        </label>
+
+        <input type="button" class="btn btn-primary" onclick="updateGrade()" value="Update Grade">
+
+    </div>
+    -------------------------------------
+    <br><b>Request Additional Information</b><br>
+    <div>
+        <label for="reimbursementId4">Reimbursement ID:
+            <input id="reimbursementId4" type="number" name="reimbursementId" class="form-control">
+        </label>
+
+        <input type="button" class="btn btn-primary" onclick="requestAdditionalInfo()" value="Request Additional Info">
+    </div>
+    -------------------------------------
+    <br>
+    <a class="btnStack" href="http://localhost:8080/trms/static/reimbursements.html">Apply For Reimbursement</a>
+    <a class="btnStack" href="http://localhost:8080/trms/static/employees.html">Go To Employees Page</a>
+    <a class="btnStack" href="http://localhost:8080/trms/static/index.html">Logout</a>
+
+    <!-- where populate data goes -->
+    <section id="data">
+
+    </section>
+</div>
+
+
+<script src="./js/directsupervisors.js"></script>
+
+<!-- Bootstrap Scripts -->
+<script crossorigin="anonymous" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
